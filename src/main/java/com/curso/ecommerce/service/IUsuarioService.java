@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import com.curso.ecommerce.model.Usuario;
 
-public interface UsuarioService {
+public interface IUsuarioService {
 	
 	Optional<Usuario> findById(Integer id);
 }

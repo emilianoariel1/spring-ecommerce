@@ -19,8 +19,8 @@ import com.curso.ecommerce.model.DetalleOrden;
 import com.curso.ecommerce.model.Orden;
 import com.curso.ecommerce.model.Producto;
 import com.curso.ecommerce.model.Usuario;
-import com.curso.ecommerce.service.ProductoService;
-import com.curso.ecommerce.service.UsuarioService;
+import com.curso.ecommerce.service.IProductoService;
+import com.curso.ecommerce.service.IUsuarioService;
 
 @Controller
 @RequestMapping("/")
@@ -29,10 +29,10 @@ public class HomeController {
 	private final Logger log = LoggerFactory.getLogger(HomeController.class);
 	
 	@Autowired
-	private ProductoService productoService;
+	private IProductoService productoService;
 	
 	@Autowired
-	private UsuarioService usuarioService;
+	private IUsuarioService usuarioService;
 	
 	// almacenar los detalles de la orden
 	List<DetalleOrden> detalles = new ArrayList<DetalleOrden>();
